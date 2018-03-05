@@ -24,7 +24,7 @@ if(user) {
     userInfo.email = user.email;
     var userUid = user.uid;
     userInfo.uid = user.uid;
-    userInfo.photoURL = user.photoURL;
+    userInfo.photoURL = userImg;
     document.querySelector(".circle").src = userImg;
     document.querySelector(".name").innerHTML = userName;
     document.querySelector(".email").innerHTML = userEmail;
