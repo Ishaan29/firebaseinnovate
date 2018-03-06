@@ -20,7 +20,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
           
-
+ 
  
 
 </script>
@@ -59,8 +59,8 @@
                   <a href="#!name"><span class="white-text name"></span></a>
                   <a href="#!email"><span class="white-text email"></span></a>
                 </div></li>
-                <li><a href="#!">Details</a></li>
-                <li><a href="#!">Events</a></li>
+                <li><a href="#!" onclick = "showDetails()">Details</a></li>
+                <li><a href="#!" onclick = "showEvents()">Events</a></li>
                 <li><div class="divider"></div></li>
                 
                 <li><a class="waves-effect" onclick="logout()" href="#!">Logout</a></li>
@@ -72,13 +72,13 @@
                     <div class="nav-wrapper">
                     </div>
                 </nav>
-             <div class = "container ">
+             <div class = "container links">
                     <div class="col s6 offset-s6">
                             <div class="row">
                                     <form class="col s12">
                                       <div class="row">
                                         <div class="input-field col s6">
-                                          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                          <input placeholder="Placeholder" id="first_name" class = "first_name" type="text" class="validate">
                                           <label for="first_name">First Name</label>
                                         </div>
                                         <div class="input-field col s6">
@@ -100,7 +100,7 @@
                                       </div>
                                       <div class="row">
                                         <div class="input-field col s12">
-                                          <input id="email" type="email" class="validate">
+                                          <input id="e" type="email" class="validate">
                                           <label for="email">Email</label>
                                         </div>
                                       </div>
@@ -113,11 +113,15 @@
                                           </div>
                                         </div>
                                       </div>
+                                      <a class="waves-effect waves-light btn" onclick="pushUserDetails()">submit</a>
                                     </form>
                                   </div>
                                         
                  </div>
              </div>
+</div>
+<div class = "events links" style = "display: none;" >
+  <h1>this is events</h1>
 </div>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>

@@ -6,6 +6,11 @@ var userInfo = {
   uid:""
 }
 
+var userDetails = {
+  event:""
+}
+
+// var evt = document.querySelector(".events").style.display = "none";
 
 firebase.auth().onAuthStateChanged(function(user) {
 if(user) {
@@ -24,7 +29,7 @@ if(user) {
     userInfo.email = user.email;
     var userUid = user.uid;
     userInfo.uid = user.uid;
-    userInfo.photoURL = userImg;
+    userInfo.photoURL = user.photoURL;
     document.querySelector(".circle").src = userImg;
     document.querySelector(".name").innerHTML = userName;
     document.querySelector(".email").innerHTML = userEmail;
@@ -70,4 +75,27 @@ function logout() {
   }).catch(function(error) {
     // An error happened.
   });
+}
+
+function pushUserDetails() {
+  var firstname = document.querySelector(".first_name").value;
+ 
+  userDetails.event = firstname;
+  db.collection("users").doc(userInfo.uid).update(userDetails).then(function() {
+    console.log("Document Sussfully written");
+  })
+}
+
+function showEvents(){
+  var evt = document.querySelector(".events").style.display = "block";
+  var details = document.querySelector(".links").style.display = "none";
+}
+function showDetails() {
+  var det = document.querySelector(".container").style.display = "block"; 
+  var evt = document.querySelector(".events").style.display = "none ";
+ 
+  
+  }
+function showCalander() {
+
 }
