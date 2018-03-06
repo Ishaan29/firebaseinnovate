@@ -15,6 +15,9 @@ var userDetails = {
   nameofclg:"",
   year: "",
   noOfTeamMembers: "",
+  participation: "",
+  gender:"",
+  evntId: ""
 }
 
 // var evt = document.querySelector(".events").style.display = "none";
@@ -41,7 +44,7 @@ if(user) {
     document.querySelector(".name").innerHTML = userName;
     document.querySelector(".email").innerHTML = userEmail;
    
-    db.collection("users").doc(user.uid).set(userInfo).then(function() {
+    db.collection("users").doc(user.uid).update(userInfo).then(function() {
       console.log("Document successfully written!");
   });
   
@@ -99,7 +102,11 @@ function pushUserDetails() {
   var te = document.querySelector("#team");
   userDetails.noOfTeamMembers = te.options[te.selectedIndex].text;
 
+  var pr = document.querySelector('#pr');
+  userDetails.participation = pr.options[pr.selectedIndex].text;
 
+  userDetails.evtId = evntId();
+  console.log(userDetails.evntId);
   db.collection("users").doc(userInfo.uid).update(userDetails).then(function() {
     console.log("Document Sussfully written");
   })
@@ -117,4 +124,8 @@ function showDetails() {
   }
 function showCalander() {
 
+}
+
+function evntId() {
+  return "Ino_" + Math.random().toString(36).substr(2, 8);
 }
