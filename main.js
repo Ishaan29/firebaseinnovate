@@ -91,16 +91,17 @@ function logout() {
 function pushUserDetails() {
   userDetails.firstName = document.querySelector("#first_name").value;
   userDetails.laseName = document.querySelector("#last_name").value;
-  userDetails.regNo = document.querySelector("#Registration").value;
-  userDetails.branch = document.querySelector("#Branch").value;
-  
-  userDetails.Cono = document.querySelector("#Contact").value;
-  userDetails.nameofclg = document.querySelector("#NameCollege").value;
 
-  var sel = document.querySelector("#year");
+  // userDetails.regNo = document.querySelector("#Registration").value;
+  // userDetails.branch = document.querySelector("#Branch").value;
+  
+  userDetails.Cono = document.querySelector("#contactnumber").value;
+  // userDetails.nameofclg = document.querySelector("#NameCollege").value;
+
+  // var sel = document.querySelector("#year");
   userDetails.year = sel.options[sel.selectedIndex].text;
   
-  var te = document.querySelector("#team");
+  // var te = document.querySelector("#team");
   userDetails.noOfTeamMembers = te.options[te.selectedIndex].text;
 
   var pr = document.querySelector('#pr');

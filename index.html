@@ -96,7 +96,7 @@
                                           <b>Participant:</b>
                                           <p>
                                             <select id="pr" required>
-                                              <option value="Default" disabled selected>Choose Your Participation</option>
+                                              <option value="Default" disabled selected>Select</option>
                                               <option value="internal">Internal</option>
                                               <option value="External">External</option>
                                             </select>
@@ -105,59 +105,45 @@
                                       </div>
                                       <div class="row">
                                           <div class="input-field col s12">
-                                              <label for="last_name">Registration Number</label> 
-                                            <input id="Registration" type="text" class="validate" required>
+                                            <label for="last_name">College/University Name</label> 
+                                            <input id="collegename" type="text" class="validate" required>
                                       </div>
                                           <div class="input-field col s12">
-                                              <label for="last_name">Branch</label> 
-                                            <input id="Branch" type="text" class="validate">
+                                            <label for="last_name">Course/Degree</label> 
+                                            <input id="course" type="text" class="validate" required>
                                       </div>
                                     
                                       
                                           <div class="input-field col s12">
-                                            <lable>Year:</lable>  
-                                            <select id = "year" required>
-                                                <option value="" disabled selected>Choose your Year</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>                            
-                                              </select>
+                                            <lable>Branch/Specification</lable>  
+                                            <input id="Branch" type="text" class="validate" required>
                                             </div>                                   
                                            <div class="input-field col s12">
-                                              <label for="last_name"><b>Contact Number</b></label>                                             
-                                              <input placeholder="Number" id="Contact" type="number" class="validate" required>
+                                            <label for="gender"><b>Gender</b></label> 
+                                            <br>
+                                            <br>                                            
+                                            <select id = "gender" required>
+                                                <option value="" disabled selected>Select</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                                <option value="2">Others</option>                                                                                                                           
+                                              </select>
                                              </div>
                                          </div>
                                        </div>
                                        <div class="row">
                                         <div class="col s12">
-                                            <label for="first_name"><b>Name of college:</b></label>
-                                          <input placeholder="ex:- SRM IST" id="NameCollege" type="text" class="validate" required>
+                                          <label for="number"><b>Contact number:</b></label>
+                                          <input placeholder="Number" id="contactnumber" type="number" class="validate" required>
                                         </div>
                                       </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                              <lable>Number of team members (if any)</lable>  
-                                              <select id = "team" required>
-                                                  <option value="" disabled selected>Choose your option</option>
-                                                  <option value="1">2</option>
-                                                  <option value="2">3</option>
-                                                  <option value="3">4</option>
-                                                  <option value="3">5</option>
-                                                  <option value="3">6</option>
-                                                  <option value="3">7</option>
-                                                  <option value="3">8</option>
-                                                  
-                                                </select>
-                                              </div>
+                                      <div class="row">
+                                        <div class="input-field col s12">
+                                          <label>Email:</label>
+                                         <input type="email" placeholder="janedoe@xyz.com" id="email" required>
                                           </div>
-                                          <div class="row">
-                                              <div class="col s12">
-                                                  <label for="textarea1">Name of team members (if any)</label>
-                                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                              </div>
-                                            </div>
+                                      </div>
+                                   
                                           </form>
                                           <a class="waves-effect waves-light btn" onclick="pushUserDetails()">Submit</a>
                                   </div>
