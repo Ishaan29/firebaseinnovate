@@ -79,7 +79,7 @@ var card = document.getElementsByClassName(".eventsCreator")[0];
 console.log(card)
 var item = evt.events;
 
-for(i=1; i<=item.length - 1; i++){
+for(i=0; i<=item.length - 1; i++){
     let name = item[i].name;
     console.log(name);
     let desc = item[i].desc;
