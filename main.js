@@ -12,7 +12,9 @@ var userDetails = {
   regNo: "",
   branch:"",
   Cono:"",
-  nameofclg:""
+  nameofclg:"",
+  year: "",
+  noOfTeamMembers: "",
 }
 
 // var evt = document.querySelector(".events").style.display = "none";
@@ -83,9 +85,21 @@ function logout() {
 }
 
 function pushUserDetails() {
-  var firstname = document.querySelector(".first_name").value;
+  userDetails.firstName = document.querySelector("#first_name").value;
+  userDetails.laseName = document.querySelector("#last_name").value;
+  userDetails.regNo = document.querySelector("#Registration").value;
+  userDetails.branch = document.querySelector("#Branch").value;
   
-  userDetails.event = firstname;
+  userDetails.Cono = document.querySelector("#Contact").value;
+  userDetails.nameofclg = document.querySelector("#NameCollege").value;
+
+  var sel = document.querySelector("#year");
+  userDetails.year = sel.options[sel.selectedIndex].text;
+  
+  var te = document.querySelector("#team");
+  userDetails.noOfTeamMembers = te.options[te.selectedIndex].text;
+
+
   db.collection("users").doc(userInfo.uid).update(userDetails).then(function() {
     console.log("Document Sussfully written");
   })

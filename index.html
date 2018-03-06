@@ -71,8 +71,8 @@
               <!-- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
               <!-- <script>$(".button-collapse").sideNav();</script> -->
              </div>
-             <nav>
-              <div class="nav-wrapper fixed">
+             <nav >
+              <div class="nav-wrapper ">
               </div>
             </nav>
             
@@ -83,11 +83,11 @@
                                     <form class="col s12">
                                       <div class="row">
                                         <div class="input-field col s6">
-                                          <input placeholder="Jane" id="first_name" type="text" class="validate">
+                                          <input placeholder="" id="first_name" type="text" class="validate">
                                           <label for="first_name">First Name</label>
                                         </div>
                                         <div class="input-field col s6">
-                                          <input placeholder="Doe"id="last_name" type="text" class="validate">
+                                          <input placeholder=""id="last_name" type="text" class="validate">
                                           <label for="last_name">Last Name</label>
                                         </div>
                                       </div>
@@ -107,18 +107,18 @@
                                       <div class="row">
                                           <div class="input-field col s12">
                                               <label for="last_name">Registration Number</label> 
-                                            <input id="last_name" type="text" class="validate">
+                                            <input id="Registration" type="text" class="validate">
                                       </div>
                                           <div class="input-field col s12">
                                               <label for="last_name">Branch</label> 
-                                            <input id="last_name" type="text" class="validate">
+                                            <input id="Branch" type="text" class="validate">
                                       </div>
                                     
                                       
                                           <div class="input-field col s12">
-                                            <lable><b>Year:</b></lable>  
-                                            <select>
-                                                <option value="" disabled selected>Choose your option</option>
+                                            <lable>Year:</lable>  
+                                            <select id = "year">
+                                                <option value="" disabled selected>Choose your Year</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -127,20 +127,20 @@
                                             </div>                                   
                                            <div class="input-field col s12">
                                               <label for="last_name"><b>Contact Number</b></label>                                             
-                                              <input placeholder="Number" id="last_name" type="number" class="validate">
+                                              <input placeholder="Number" id="Contact" type="number" class="validate">
                                              </div>
                                          </div>
                                        </div>
                                        <div class="row">
                                         <div class="col s12">
                                             <label for="first_name"><b>Name of college:</b></label>
-                                          <input placeholder="ex:- SRM IST" id="first_name" type="text" class="validate">
+                                          <input placeholder="ex:- SRM IST" id="NameCollege" type="text" class="validate">
                                         </div>
                                       </div>
                                         <div class="row">
                                             <div class="input-field col s12">
                                               <lable>Number of team members (if any)</lable>  
-                                              <select>
+                                              <select id = "team" >
                                                   <option value="" disabled selected>Choose your option</option>
                                                   <option value="1">2</option>
                                                   <option value="2">3</option>
@@ -160,6 +160,7 @@
                                               </div>
                                             </div>
                                           </form>
+                                          <a class="waves-effect waves-light btn" onclick="pushUserDetails()">Submit</a>
                                   </div>
                                         
                  </div>
