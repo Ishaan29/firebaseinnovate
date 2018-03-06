@@ -48,7 +48,6 @@
     </div>
     <p id="message">Not registered? <a href="signup.html">Create an account</a></p>
 </div>
-<div class="container">
 <div class = "userInfo">
     <div class = "side">
            
@@ -76,16 +75,17 @@
                     </div>
                 </nav>
              <div class = "container ">
+               <h1>Details</h1>
                     <div class="col s6 offset-s6">
                             <div class="row">
                                     <form class="col s12">
                                       <div class="row">
                                         <div class="input-field col s6">
-                                          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                          <input placeholder="Jane" id="first_name" type="text" class="validate">
                                           <label for="first_name">First Name</label>
                                         </div>
                                         <div class="input-field col s6">
-                                          <input id="last_name" type="text" class="validate">
+                                          <input placeholder="Doe"id="last_name" type="text" class="validate">
                                           <label for="last_name">Last Name</label>
                                         </div>
                                       </div>
@@ -104,16 +104,17 @@
                                       </div>
                                       <div class="row">
                                           <div class="input-field col s12">
-                                              <label for="last_name">Registration Number (internal participants only)</label> 
+                                              <label for="last_name">Registration Number</label> 
                                             <input id="last_name" type="text" class="validate">
                                       </div>
-                                      <div class="row">
                                           <div class="input-field col s12">
                                               <label for="last_name">Branch</label> 
                                             <input id="last_name" type="text" class="validate">
-                                      </div> <div class="row">
+                                      </div>
+                                    
+                                      
                                           <div class="input-field col s12">
-                                            <lable><b>Year:</b> (internal participant only)</lable>  
+                                            <lable><b>Year:</b></lable>  
                                             <select>
                                                 <option value="" disabled selected>Choose your option</option>
                                                 <option value="1">1</option>
@@ -121,24 +122,22 @@
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>                            
                                               </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
+                                            </div>                                   
                                            <div class="input-field col s12">
-                                              <label for="last_name">Contact Number</label>                                             
-                                              <input id="last_name" type="number" class="validate">
+                                              <label for="last_name"><b>Contact Number</b></label>                                             
+                                              <input placeholder="Number" id="last_name" type="number" class="validate">
                                              </div>
                                          </div>
                                        </div>
                                        <div class="row">
                                         <div class="col s12">
-                                            <label for="first_name">Name of college:</label>
+                                            <label for="first_name"><b>Name of college:</b></label>
                                           <input placeholder="ex:- SRM IST" id="first_name" type="text" class="validate">
                                         </div>
                                       </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                              <lable>Number of team members</lable>  
+                                              <lable>Number of team members (if any)</lable>  
                                               <select>
                                                   <option value="" disabled selected>Choose your option</option>
                                                   <option value="1">2</option>
@@ -158,13 +157,11 @@
                                                 <textarea id="textarea1" class="materialize-textarea"></textarea>
                                               </div>
                                             </div>
-                                    
                                           </form>
                                   </div>
                                         
                  </div>
              </div>
-</div>
 </div>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
