@@ -7,7 +7,12 @@ var userInfo = {
 }
 
 var userDetails = {
-  event:""
+  firstName: "",
+  laseName: "",
+  regNo: "",
+  branch:"",
+  Cono:"",
+  nameofclg:""
 }
 
 // var evt = document.querySelector(".events").style.display = "none";
@@ -79,7 +84,7 @@ function logout() {
 
 function pushUserDetails() {
   var firstname = document.querySelector(".first_name").value;
- 
+  
   userDetails.event = firstname;
   db.collection("users").doc(userInfo.uid).update(userDetails).then(function() {
     console.log("Document Sussfully written");
