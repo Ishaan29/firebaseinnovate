@@ -82,3 +82,11 @@ body {
 .container  {
   margin-left: 25vw;
 }
+
+.side-nav.fixed {
+  margin-top: 65px;
+  position: fixed;
+}
+.user-view {
+  height: 182px;
+}
