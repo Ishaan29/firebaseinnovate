@@ -89,3 +89,8 @@ body {
 .user-view {
   height: 182px;
 }
+
+.events {
+  margin-left : 25vw;
+  margin-top: 30vh;
+}
