@@ -1,4 +1,5 @@
-var db = firebase.firestore();
+{
+  var db = firebase.firestore();
 var userInfo = {
   displayName:"",
   photoURL:"",
@@ -7,17 +8,17 @@ var userInfo = {
 }
 
 var userDetails = {
-  firstName: "",
-  laseName: "",
-  regNo: "",
-  branch:"",
-  Cono:"",
-  nameofclg:"",
-  year: "",
-  noOfTeamMembers: "",
-  participation: "",
-  gender:"",
-  evntId: ""
+  firstName: null,
+  laseName: null,
+  regNo: null,
+  branch: null,
+  Cono: null,
+  nameofclg: null,
+  year: null,
+  noOfTeamMembers: null,
+  participation: null,
+  gender: null,
+  evntId: null
 }
 
 // var evt = document.querySelector(".events").style.display = "none";
@@ -108,7 +109,9 @@ function pushUserDetails() {
   userDetails.evtId = evntId();
   console.log(userDetails.evntId);
   db.collection("users").doc(userInfo.uid).update(userDetails).then(function() {
-    console.log("Document Sussfully written");
+    if(userDetails != null ){
+      console.log("Document updated sussfully!");
+    }
   })
 }
 
@@ -128,4 +131,5 @@ function showCalander() {
 
 function evntId() {
   return "Ino_" + Math.random().toString(36).substr(2, 8);
+}
 }
