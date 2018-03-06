@@ -1,5 +1,5 @@
-{
-  var db = firebase.firestore();
+
+var db = firebase.firestore();
 var userInfo = {
   displayName:"",
   photoURL:"",
@@ -133,5 +133,5 @@ function showCalander() {
 function evntId() {
   return "Ino_" + Math.random().toString(36).substr(2, 8);
 }
-}
+
 

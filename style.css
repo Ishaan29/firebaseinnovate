@@ -84,7 +84,7 @@ body {
 }
 
 .side-nav.fixed {
-  margin-top: 65px;
+
 }
 .user-view {
   height: 182px;
@@ -92,5 +92,8 @@ body {
 
 .events {
   margin-left : 25vw;
-  margin-top: 30vh;
+  margin-top: 10vh;
+}
+.card {
+  
 }
